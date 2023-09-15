@@ -58,10 +58,13 @@ struct PlaceDetailView: View {
     
     var body: some View {
         VStack {
-            Image(place.image)
-                .resizable()
-            Text("\(place.description)")
-            Spacer()
+            ScrollView {
+                Image(place.image)
+                    .resizable()
+                    .scaledToFit()
+                Text("\(place.description)")
+                Spacer()
+            }
         }
         .padding()
         .navigationTitle(place.name)
