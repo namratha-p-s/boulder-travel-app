@@ -9,9 +9,10 @@ import SwiftUI
 
 struct PlacesView: View {
     @State private var selectedTab = 0
+    
     var body: some View {
           VStack {
-                TabView (selection: $selectedTab){
+                TabView (selection: $selectedTab) {
                     ListPlacesView()
                         .tabItem {
                             Label("Places", systemImage: "globe")
@@ -23,7 +24,8 @@ struct PlacesView: View {
                             Label("Travel Tips", systemImage: "heart")
                         }
                         .tag(1)
-                }.navigationBarTitle(selectedTab == 0 ? "Places" : "Travel Tips", displayMode: .inline)
+                }
+                .navigationBarTitle(selectedTab == 0 ? "Places" : "Travel Tips", displayMode: .inline)
             }
     }
 }

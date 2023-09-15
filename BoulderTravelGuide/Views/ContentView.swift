@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.presentationMode) private var presentationMode
     @State private var showContactDetails = false
     @State private var showAlert = false
     
@@ -16,6 +15,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Spacer()
+                
                 HStack {
                     Text("Boulder Travel Guide")
                         .bold()
@@ -29,6 +29,7 @@ struct ContentView: View {
                 
                 List {
                     NavigationLink(destination: PlacesView()) {Text("Places")}
+                    
                     Button(action: {showContactDetails = true}) {
                         Text("About Us")
                     }
@@ -36,6 +37,7 @@ struct ContentView: View {
                             Text("")
                             Text("Developed by: Namratha")
                         }
+                    
                     Button(action: {showAlert = true}) {
                         Text("Quit")
                     }
