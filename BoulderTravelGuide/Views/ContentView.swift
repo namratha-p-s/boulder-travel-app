@@ -34,9 +34,8 @@ struct ContentView: View {
                         Text("About Us")
                     }
                     .sheet(isPresented: $showContactDetails) {
-                            Text("")
-                            Text("Developed by: Namratha")
-                        }
+                        Text("Developed by: Namratha")
+                    }
                     
                     Button(action: {showAlert = true}) {
                         Text("Quit")
