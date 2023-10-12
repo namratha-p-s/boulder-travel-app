@@ -21,38 +21,40 @@ struct ContentView: View {
                         .bold()
                         .font(.largeTitle)
                 }
-                
-                Image("boulder")
-                    .resizable()
-                    .padding()
-                    .cornerRadius(75)
-                
                 List {
-                    NavigationLink(destination: PlacesView()) {Text("Places")}
-                    
-                    Button(action: {showContactDetails = true}) {
-                        Text("About Us")
-                    }
-                    .sheet(isPresented: $showContactDetails) {
-                        Text("Developed by: Namratha")
-                    }
-                    
-                    Button(action: {showAlert = true}) {
-                        Text("Quit")
-                    }
-                    .alert(isPresented: $showAlert) {
-                        Alert(
-                            title: Text("Quit App"),
-                            message: Text("Are you sure you want to quit the app?"),
-                            primaryButton: .destructive(Text("Yes")) {
-                                exit(0)
-                            },
-                            secondaryButton: .default(Text("No"))
-                        )
+                    ForEach(places) { place in
+                        NavigationLink(destination: PlaceDetailView(place: place)) {
+                            PlaceRow(place: place)
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+struct PlaceRow: View {
+    var place: Place
+    
+    var body: some View {
+        HStack {
+            Image(place.image)
+                .resizable()
+                .frame(width: 110, height: 110)
+            Spacer()
+            Text(place.name)
+                .font(.headline)
+        }
+    }
+}
+
+struct PlaceDetailView: View {
+    var place: Place
+    
+    var body: some View {
+        MapView(selectedLocation: place)
+            .padding()
+            .navigationTitle(place.name)
     }
 }
 
