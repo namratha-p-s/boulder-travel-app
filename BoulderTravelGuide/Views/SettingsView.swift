@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("isPermission") private var isPermission = false
-    @State var i = 0
+    @AppStorage("i") var i = 0
     var pushNotificationService = PushNotificationService()
     
     var body: some View {
