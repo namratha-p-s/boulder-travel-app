@@ -21,10 +21,10 @@ class PushNotificationService: ObservableObject {
         }
     }
 
-    func scheduleNotification(title: String, subtitle: String) {
+    func scheduleNotification(title: String, message: String) {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = title
-        notificationContent.subtitle = subtitle
+        notificationContent.body = message
         notificationContent.sound = UNNotificationSound.default
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)

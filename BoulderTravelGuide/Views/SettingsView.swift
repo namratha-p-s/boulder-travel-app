@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var isPermission = false
-    @State private var isRemind = false
+    @AppStorage("isPermission") private var isPermission = false
+    @State var i = 0
     var pushNotificationService = PushNotificationService()
+    
     var body: some View {
         Form {
             Toggle("Enable Push Notifications", isOn: $isPermission)
@@ -21,12 +22,16 @@ struct SettingsView: View {
 
             Button(action: {
                     pushNotificationService.scheduleNotification(
-                        title: "Test Notification",
-                        subtitle: "Tap on this!"
+                        title: "Travel Tips",
+                        message: tips[i]
                     )
+                i = i + 1
+                if i >= tips.count {
+                    i = 0
+                }
             }) {
                 HStack {
-                    Text("Get test notification in 5 seconds")
+                    Text("Get travel tips in 5 seconds")
                 }
             }
         }

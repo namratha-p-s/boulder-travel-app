@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showTravelTipsBanner = false
     @State private var selectedTab = 0
-    @State private var pushNotificationService = PushNotificationService()
+    private var pushNotificationService = PushNotificationService()
     
     var body: some View {
         VStack {

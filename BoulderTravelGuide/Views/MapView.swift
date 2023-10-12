@@ -12,6 +12,7 @@ struct MapView: View {
     @State var selectedLocation: Place
     @State private var scene: MKLookAroundScene?
     @State private var region: MKCoordinateRegion?
+    @State private var isSceneInteractive = true
     
     var body: some View {
         VStack {
@@ -23,7 +24,7 @@ struct MapView: View {
             }
         }.overlay(alignment: .bottom) {
             if scene != nil {
-                LookAroundPreview(scene: $scene, allowsNavigation: false, badgePosition: .bottomTrailing)
+                LookAroundPreview(scene: $scene, allowsNavigation: true, badgePosition: .bottomTrailing)
                     .frame(height: 150)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .safeAreaPadding(.bottom, 40)
