@@ -8,9 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showContactDetails = false
-    @State private var showAlert = false
+    @State private var showTravelTipsBanner = false
+    @State private var selectedTab = 0
+    @State private var pushNotificationService = PushNotificationService()
     
+    var body: some View {
+        VStack {
+            TabView (selection: $selectedTab) {
+                ListPlacesView()
+                    .tabItem {
+                        Label("Places", systemImage: "globe")
+                    }
+                    .tag(0)
+                
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "heart")
+                    }
+                    .tag(1)
+                    .environmentObject(pushNotificationService)
+            }
+            .navigationBarTitle(selectedTab == 0 ? "Places" : "Travel Tips", displayMode: .inline)
+        }
+    }
+}
+
+struct ListPlacesView: View {
     var body: some View {
         NavigationView {
             VStack {
@@ -40,7 +63,7 @@ struct PlaceRow: View {
         HStack {
             Image(place.image)
                 .resizable()
-                .frame(width: 110, height: 110)
+                .frame(width: 100, height: 100)
             Spacer()
             Text(place.name)
                 .font(.headline)

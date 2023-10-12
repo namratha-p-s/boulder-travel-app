@@ -13,6 +13,8 @@
 		4906417C2AB364E600A98F30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4906417B2AB364E600A98F30 /* Preview Assets.xcassets */; };
 		4906418B2AB405C000A98F30 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4906418A2AB405C000A98F30 /* Places.swift */; };
 		52F6AFB92AD83E2800668B92 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6AFB82AD83E2800668B92 /* MapView.swift */; };
+		52F6AFBB2AD85B0A00668B92 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6AFBA2AD85B0A00668B92 /* SettingsView.swift */; };
+		52F6AFBE2AD85C2400668B92 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6AFBD2AD85C2400668B92 /* PushNotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		4906417B2AB364E600A98F30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4906418A2AB405C000A98F30 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		52F6AFB82AD83E2800668B92 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		52F6AFBA2AD85B0A00668B92 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		52F6AFBD2AD85C2400668B92 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		490641732AB364E500A98F30 /* BoulderTravelGuide */ = {
 			isa = PBXGroup;
 			children = (
+				52F6AFBC2AD85BF400668B92 /* Services */,
 				490641892AB4059900A98F30 /* Models */,
 				490641822AB4049600A98F30 /* Views */,
 				490641742AB364E500A98F30 /* BoulderTravelGuideApp.swift */,
@@ -77,6 +82,7 @@
 			children = (
 				490641762AB364E500A98F30 /* ContentView.swift */,
 				52F6AFB82AD83E2800668B92 /* MapView.swift */,
+				52F6AFBA2AD85B0A00668B92 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,6 +93,14 @@
 				4906418A2AB405C000A98F30 /* Places.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		52F6AFBC2AD85BF400668B92 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				52F6AFBD2AD85C2400668B92 /* PushNotificationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F6AFBE2AD85C2400668B92 /* PushNotificationService.swift in Sources */,
 				4906418B2AB405C000A98F30 /* Places.swift in Sources */,
 				52F6AFB92AD83E2800668B92 /* MapView.swift in Sources */,
 				490641772AB364E500A98F30 /* ContentView.swift in Sources */,
+				52F6AFBB2AD85B0A00668B92 /* SettingsView.swift in Sources */,
 				490641752AB364E500A98F30 /* BoulderTravelGuideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

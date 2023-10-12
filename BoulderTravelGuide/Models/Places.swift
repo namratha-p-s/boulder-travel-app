@@ -19,14 +19,14 @@ struct Place: Identifiable {
 var places = [
     Place(
         name: "CU Boulder",
-        description: "Located at the foot of the Rocky Mountains, the city of Boulder is a leading force in research, technology and entrepreneurship—a place where innovation happens. At the heart of the city, CU Boulder produces some of the best and brightest in these industries and is a primary source of Colorado’s highly skilled workforce.",
+        description: "Located at the foot of the Rocky Mountains, the city of Boulder is a leading force in research, technology and entrepreneurship. At the heart of the city, CU Boulder produces some of the best and brightest in these industries and is a primary source of Colorado’s highly skilled workforce.",
         image: "cu",
         latitude: 40.00805022734468,
         longitude: -105.26574971820813),
     
     Place(
         name: "Chautauqua Park",
-        description: "Chautauqua Park is a portion of an iconic historic landmark dating back to when the City of Boulder began preserving wild lands over 100 years ago. In 1898, Boulder residents approved a bond issue to purchase 80 acres to be used as a “Chautauqua”. The park land owned by Boulder Parks and Recreation is located adjacent to OSMP trails, Chautauqua Dining Hall and Auditorium, and Chautauqua Ranger Cottage and provides a playground, tennis courts, and open turf.",
+        description: "Chautauqua Park is a portion of an iconic historic landmark dating back to when the City of Boulder began preserving wild lands over 100 years ago. In 1898, Boulder residents approved a bond issue to purchase 80 acres to be used as a “Chautauqua”.",
         image: "chautauqua",
         latitude: 39.99941326157732,
         longitude: -105.28152106076895),

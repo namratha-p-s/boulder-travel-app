@@ -20,8 +20,6 @@ struct MapView: View {
                     .resizable()
                     .scaledToFit()
                 Text("\(selectedLocation.description)")
-                Spacer()
-                Spacer()
             }
         }.overlay(alignment: .bottom) {
             if scene != nil {
